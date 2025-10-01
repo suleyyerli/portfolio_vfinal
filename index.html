@@ -1,328 +1,282 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Exemple CV Tailwind + DaisyUI</title>
-    <!-- Tailwind via CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- DaisyUI -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <!-- Police rétro gaming -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      html { font-size: 90%; }
-      .retro-font { font-family: 'Press Start 2P', monospace; }
-    </style>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <title>Portfolio suleyyerli</title>
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-  <body class="text-white min-h-screen bg-[#000]">
-    <!-- Header -->
-    <header class="flex justify-between items-center p-6">
-      <!-- Échiquier -->
-      <div class="grid grid-cols-3 gap-0 w-15 h-15">
-        <!-- Ligne 1 -->
-        <div class="w-4 h-4 bg-[#FEF9E7]"></div>
-        <div class="w-4 h-4 bg-[#679438]"></div>
-        <div class="w-4 h-4 bg-[#FEF9E7]"></div>
+  <!-- DaisyUI -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.css" rel="stylesheet" type="text/css" />
+  <!-- Police rétro gaming -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet">
+  <style>
+    html {
+      font-size: 100%;
+    }
 
-        <!-- Ligne 2 -->
-        <div class="w-4 h-4 bg-[#679438]"></div>
-        <div class="w-4 h-4 bg-[#FEF9E7]"></div>
-        <div class="w-4 h-4 bg-[#679438]"></div>
+    .instrument-serif-regular {
+      font-family: "Instrument Serif", serif;
+      font-weight: 400;
+      font-style: normal;
+    }
 
-        <!-- Ligne 3 -->
-        <div class="w-4 h-4 bg-[#FEF9E7]"></div>
-        <div class="w-4 h-4 bg-[#679438]"></div>
-        <div class="w-4 h-4 bg-[#FEF9E7]"></div>
+    .instrument-serif-regular-italic {
+      font-family: "Instrument Serif", serif;
+      font-weight: 400;
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<body class="text-white min-h-screen bg-[#000]">
+  <!-- Header -->
+  <header class="flex justify-between items-center p-6">
+    <!-- Échiquier -->
+    <div class="grid grid-cols-3 gap-0 w-15 h-15">
+      <!-- Ligne 1 -->
+      <div class="w-4 h-4 bg-[#FEF9E7]"></div>
+      <div class="w-4 h-4 bg-[#679438]"></div>
+      <div class="w-4 h-4 bg-[#FEF9E7]"></div>
+
+      <!-- Ligne 2 -->
+      <div class="w-4 h-4 bg-[#679438]"></div>
+      <div class="w-4 h-4 bg-[#FEF9E7]"></div>
+      <div class="w-4 h-4 bg-[#679438]"></div>
+
+      <!-- Ligne 3 -->
+      <div class="w-4 h-4 bg-[#FEF9E7]"></div>
+      <div class="w-4 h-4 bg-[#679438]"></div>
+      <div class="w-4 h-4 bg-[#FEF9E7]"></div>
+    </div>
+
+    <!-- Bouton Connect Wallet -->
+    <button
+      class="bg-white/20 hover:bg-[#679438] text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+      Le bouton ne fait rien
+    </button>
+  </header>
+
+  <!-- Container principal -->
+  <div class="max-w-2xl w-full px-6 py-10 mx-auto">
+    <!-- Profil -->
+    <div class="relative rounded-lg overflow-hidden">
+      <!-- Image de fond DBZ -->
+      <div class="absolute inset-0">
+        <img src="img/fond.jpg" alt="back" class="w-full h-full object-cover" />
+        <!-- Overlay sombre pour la lisibilité du texte -->
+        <div class="absolute inset-0 bg-black/40"></div>
       </div>
-
-      <!-- Bouton Connect Wallet -->
-      <button
-        class="bg-white/20 hover:bg-[#679438] text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
-      >
-        Le bouton ne fait rien
-      </button>
-    </header>
-
-    <!-- Container principal -->
-    <div class="max-w-2xl w-full px-6 py-10 mx-auto">
-      <!-- Profil -->
-      <div class="relative rounded-lg overflow-hidden">
-        <!-- Image de fond DBZ -->
-        <div class="absolute inset-0">
-          <img
-            src="img/windowspixel.jpg"
-            alt="back"
-            class="w-full h-full object-cover"
-          />
-          <!-- Overlay sombre pour la lisibilité du texte -->
-          <div class="absolute inset-0 bg-black/40"></div>
-        </div>
-        <!-- Contenu du profil avec position relative pour être au-dessus de l'image -->
-        <div class="relative z-10 p-6">
-          <div class="grid grid-cols-4 gap-4 items-center">
-            <!-- Avatar -->
-            <div class="col-span-1">
-              <img
-                src="./img/duck.jpg"
-                alt="avatar"
-                class="w-20 h-20 rounded-full border-4 border-white/20 transform hover:scale-110 transition-transform duration-300"
-              />
-              <a
-                href="https://github.com/suleyyerli"
-                class="retro-font block mt-2 text-[10px] text-center text-[#FEF9E7] hover:text-[#679438]"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Mon GitHub
-              </a>
-            </div>
-            <!-- Texte -->
-            <div class="col-span-3">
-              <h1 class="text-xl font-bold text-[#FEF9E7]">YERLI Süleyman</h1>
-              <p class="text-[#FEF9E7]/90">Développeur Junior</p>
-              <p class="text-[#FEF9E7]/80">Full-Stack</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- About -->
-      <div class="mt-10">
-        <h2 class="font-semibold mb-2 retro-font text-[#FEF9E7]">A Propos</h2>
-        <p class="text-[#FFFFFF]/60">
-          <span class="font-semibold text-[#FEF9E7]">Salut !</span>
-          Je suis étudiant en alternance en Licence CDA spécialisé SLAM, passionné
-          d&apos;informatique . Mon parcours m&apos;a permis de combiner théorie
-          et expérience professionnelle, avec des projets concrets en entreprise
-          , incluant le développement d&apos;outil pour faciliter le travail en
-          usine , maîtrise et développement sur ERP . J&apos;aime expérimenter de
-          nouveaux outils et frameworks pour affiner mes compétences . Je suis
-          curieux et j&apos;aime apprendre de nouvelles choses .
-        </p>
-      </div>
-
-      <!-- Work Experience -->
-      <div class="mt-10 space-y-8">
-        <h2 class="font-semibold mb-4 retro-font text-[#FEF9E7]">Experiences pro.</h2>
-
-        <!-- Bloc expérience -->
-        <div class="grid grid-cols-4 gap-4">
-          <!-- Date -->
-          <div class="col-span-1 text-[#FFFFFF]/30 text-sm font-bold">
-            2023 – present
-          </div>
-          <!-- Contenu -->
-          <div class="col-span-3">
-            <h3 class="font-semibold text-sm">
-              Développeur Junior – Full-Stack
-            </h3>
-            <p class="text-[#FFFFFF]/60">
-              Développement d'application métier au sein de l'entreprise
-            </p>
-            <p class="text-[#FFFFFF]/30 text-sm font-bold mt-1">
-              Linux • SQL • ERP(DIAPASON) • JS • html • vba • script
-            </p>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-4 gap-4">
-          <div class="col-span-1 text-[#FFFFFF]/30 text-sm font-bold">
-            2021 – 2022
-          </div>
-          <div class="col-span-3">
-            <h3 class="font-semibold text-sm">Plâtrier, FLADENMULLER STRASBOURG CDI</h3>
-            <p class="text-[#FFFFFF]/60">
-              Pose de plaques, isolation, plâtre traditionnel, staff, gestion
-              d’équipe, travail en équipe, gestion de chantier
-            </p>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-4 gap-4">
-          <div class="col-span-1 text-[#FFFFFF]/30 text-sm font-bold">
-            2021
-          </div>
-          <div class="col-span-3">
-            <h3 class="font-semibold text-sm">
-              CAP Plâtrier
-            </h3>
-            <p class="text-[#FFFFFF]/60">
-              CAP Plâtrier, Compagnons du Devoir NANTES
-            </p>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-4 gap-4">
-          <div class="col-span-1 text-[#FFFFFF]/30 text-sm font-bold">
-            2019
-          </div>
-          <div class="col-span-3">
-            <h3 class="font-semibold text-sm">
-              BAC général option S
-            </h3>
-            <p class="text-[#FFFFFF]/60">
-              Lycée Kléber Strasbourg
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Side Projects -->
-      <div class="mt-10 space-y-8">
-        <h2 class="font-semibold mb-4 retro-font text-[#FEF9E7]">Projets</h2>
-
-        <div class="grid grid-cols-4 gap-4">
-          <div class="col-span-1 text-[#FFFFFF]/30 text-sm font-bold">BTS</div>
-          <div class="col-span-3">
-            <img src="./img/blanc.png" alt="chess" class="w-9 h-9 rounded-md" />
-            <a
-              href="./projets/cdcpokeligame.pdf"
-              class="font-semibold text-sm hover:underline"
-              >Application mobile - Pokeligame -->
+      <!-- Contenu du profil avec position relative pour être au-dessus de l'image -->
+      <div class="relative z-10 p-6">
+        <div class="grid grid-cols-4 gap-4 items-center">
+          <!-- Avatar -->
+          <div class="col-span-1">
+            <img src="./img/duck.jpg" alt="avatar"
+              class="w-20 h-20 rounded-full border-4 border-white/20 transform hover:scale-110 transition-transform duration-300" />
+            <a href="https://github.com/suleyyerli"
+              class="instrument-serif-regular block mt-2 text-[10px] text-center text-[#FFFFFF] hover:text-[#679438]"
+              target="_blank" rel="noopener noreferrer">
+              Mon GitHub
             </a>
-            <p class="text-[#FFFFFF]/60">
-              Pokeligame est une application mobile de gestion de collection de
-              cartes de booster et de display Pokémon.
-            </p>
-            <p class="text-[#FFFFFF]/30 text-sm font-bold mt-1">
-              React Native • Flask/Python • mysql
-            </p>
           </div>
-        </div>
-
-        <div class="grid grid-cols-4 gap-4">
-          <div class="col-span-1 text-[#FFFFFF]/30 text-sm font-bold">BTS</div>
+          <!-- Texte -->
           <div class="col-span-3">
-            <img src="./img/vert.png" alt="chess" class="w-9 h-9 rounded-md" />
-            <a
-              href="./projets/NewVotecdc.pdf"
-              class="font-semibold text-sm hover:underline"
-              >Application Web - NewVote -->
-            </a>
-            <p class="text-[#FFFFFF]/60">
-              NewVote est un réseau social permettant aux utilisateurs de
-              partager des posts, commenter et interagir avec la communauté.
-            </p>
-            <p class="text-[#FFFFFF]/30 text-sm font-bold mt-1">
-              NextJS • mysql • TailwindCSS • daisyUI
-            </p>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-4 gap-4">
-          <div class="col-span-1 text-[#FFFFFF]/30 text-sm font-bold">
-            Entreprise
-          </div>
-          <div class="col-span-3">
-            <img src="./img/blanc.png" alt="chess" class="w-9 h-9 rounded-md" />
-            <a
-              href="./projets/devise.pdf"
-              class="font-semibold text-sm hover:underline"
-              >Application terminal -->
-            </a>
-            <p class="text-[#FFFFFF]/60">
-              Pour mission en entreprise de retourner le taux de change en temps
-              réel. Playwright : Bibliothèque d'automatisation de navigateur web
-            </p>
-            <p class="text-[#FFFFFF]/30 text-sm font-bold mt-1">
-              NodeJS • Playwright • fs • path
-            </p>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-4 gap-4">
-          <div class="col-span-1 text-[#FFFFFF]/30 text-sm font-bold">
-            Entreprise
-          </div>
-          <div class="col-span-3">
-            <img src="./img/vert.png" alt="chess" class="w-9 h-9 rounded-md" />
-            <a
-              href="./projets/projet_pointage.pdf"
-              class="font-semibold text-sm hover:underline"
-              >Application métier (ERP) -->
-            </a>
-            <p class="text-[#FFFFFF]/60">
-              Intégrer la saisie des pointages dans l'ERP. Développement de
-              zéro.
-            </p>
-            <p class="text-[#FFFFFF]/30 text-sm font-bold mt-1">
-              ERP • DIAPASON • SQLServer
-            </p>
+            <h1 class="text-5xl text-[#FFFFFF] instrument-serif-regular">YERLI Süleyman</h1>
+            <p class="text-[#FFFFFF]/80 ">Développeur Junior</p>
+            <p class="text-[#FFFFFF]/80">Full-Stack</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Footer avec pixel art -->
-    <footer class="mt-20 border-t border-white/20 py-8">
-      <div class="max-w-2xl mx-auto px-6">
-        <!-- Pixel art Café -->
-        <div class="text-center mb-6">
-          <pre class="text-[#679438] text-xs leading-tight retro-font">
-           ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⣶⣶⣶⣶⣦⣤⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-            ⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⡿⠛⠉⠙⠛⠛⠛⠛⠻⢿⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀
-            ⠀⠀⠀⠀⠀⠀⠀⠀⣼⣿⠋⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⡈⢻⣿⣿⡄⠀⠀⠀⠀⠀
-            ⠀⠀⠀⠀⠀⠀⠀⣸⣿⡏⠀⠀⠀⣠⣶⣾⣿⣿⣿⠿⠿⠿⢿⣿⣿⣿⣄⠀⠀⠀⠀
-            ⠀⠀⠀⠀⠀⠀⠀⣿⣿⠁⠀⠀⢰⣿⣿⣯⠁⠀⠀⠀⠀⠀⠀⠀⠈⠙⢿⣷⡄⠀⠀
-            ⠀⠀⣀⣤⣴⣶⣶⣿⡟⠀⠀⠀⢸⣿⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣷⠀⠀
-            ⠀⢰⣿⡟⠋⠉⣹⣿⡇⠀⠀⠀⠘⣿⣿⣿⣿⣷⣦⣤⣤⣤⣶⣶⣶⣶⣿⣿⠀⠀⠀
-            ⠀⢸⣿⡇⠀⠀⣿⣿⡇⠀⠀⠀⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠀⠀⠀
-            ⠀⣸⣿⡇⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠉⠻⠿⣿⣿⣿⣿⡿⠿⠿⠛⢻⣿⡇⠀⠀⠀
-            ⠀⣿⣿⠁⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⠃⠀⠀
-            ⠀⣿⣿⠀⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⠀⠀⠀
-            ⠀⣿⣿⠀⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⠀⠀⠀
-            ⠀⢿⣿⡆⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢼⣿⡇⠀⠀⠀
-            ⠀⠸⣿⣧⡀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⡇⠀⠀⠀
-            ⠀⠀⠛⢿⣿⣿⣿⣿⣇⠀⠀⠀⠀⠀⣰⣿⣿⣷⣶⣿⣷⡆⠀⠀⣿⣿⠁⠀⠀⠀⠀
-            ⠀⠀⠀⠀⠀⠀⠀⣿⣿⠀⠀⠀⠀⠀⣿⣿⡇⠀⣽⣿⡟⠁⠀⠀⢸⣿⡟⠀⠀⠀⠀
-            ⠀⠀⠀⠀⠀⠀⠀⣿⣿⠀⠀⠀⠀⠀⣿⣿⡇⠀⢹⣿⡆⠀⠀⠀⣼⣿⡇⠀⠀⠀⠀
-            ⠀⠀⠀⠀⠀⠀⠀⢿⣿⣦⣄⣀⣠⣴⣿⣿⠀⠀⠈⠻⣿⣿⣿⣿⡿⠇⠀⠀⠀⠀⠀
-            ⠀⠀⠀⠀⠀⠀⠀⠈⠛⠻⠿⠿⠿⠿⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-          </pre>
-        </div>
 
-        <!-- Informations de contact -->
-        <div class="text-center space-y-2">
-          <a
-                href="https://github.com/suleyyerli"
-                class="retro-font block mt-2 text-[10px] text-center text-[#FEF9E7] hover:text-[#679438]"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Mon GitHub
-              </a>
-          <p class="text-white/60 text-sm">
-            🏆 Achievement Unlocked: Portfolio terminé!
+    <!-- About -->
+    <div class="mt-10">
+      <h2 class=" text-5xl mb-2 instrument-serif-regular">A Propos</h2>
+      <p class="text-[#FFFFFF]/60">
+        <span class="font-semibold text-[#FFFFFF] instrument-serif-regular-italic">Salut !</span>
+        Je suis étudiant en alternance en Licence CDA spécialisé SLAM, passionné
+        d&apos;informatique . Mon parcours m&apos;a permis de combiner théorie
+        et expérience professionnelle, avec des projets concrets en entreprise
+        , incluant le développement d&apos;outil pour faciliter le travail en
+        usine , maîtrise et développement sur ERP . J&apos;aime expérimenter de
+        nouveaux outils et frameworks pour affiner mes compétences . Je suis
+        curieux et j&apos;aime apprendre de nouvelles choses .
+      </p>
+    </div>
+
+    <!-- Work Experience -->
+    <div class="mt-10 space-y-8">
+      <h2 class=" text-5xl mb-4 instrument-serif-regular text-[#FFFFFF]">Experiences pro.</h2>
+      <!-- Bloc expérience -->
+      <div class="grid grid-cols-4 gap-4">
+        <!-- Date -->
+        <div class="col-span-1 text-[#FFFFFF]/30 text-sm font-bold">
+          2023 – present
+        </div>
+        <!-- Contenu -->
+        <div class="col-span-3">
+          <h3 class="font-semibold text-sm">
+            Développeur Junior – Full-Stack
+          </h3>
+          <p class="text-[#FFFFFF]/60">
+            Développement d'application métier au sein de l'entreprise
           </p>
-        </div>
-
-        <!-- Barre de progression pixelisée -->
-        <div class="mt-6">
-          <div class="text-center text-white/40 text-xs mt-1">
-            ████████████████████░░░░ 80%
-          </div>
-        </div>
-
-        <!-- Copyright avec style pixel -->
-        <div class="text-center mt-6 pt-4 border-t border-white/10">
-          <p class="text-white/40 text-xs retro-font">
-            © 2025 YERLI Süleyman | Made with ❤️ and lots of ☕
-          </p>
-          <p class="text-white/30 text-xs mt-1">
-            Press [SPACE] to continue... (ou pas,😄)
+          <p class="text-[#FFFFFF]/30 text-sm font-bold mt-1">
+            Linux • SQL • ERP(DIAPASON) • JS • html • script
           </p>
         </div>
       </div>
-    </footer>
-  </body>
+
+      <div class="grid grid-cols-4 gap-4">
+        <div class="col-span-1 text-[#FFFFFF]/30 text-sm font-bold">
+          2021 – 2022
+        </div>
+        <div class="col-span-3">
+          <h3 class="font-semibold text-sm">Plâtrier, FLADENMULLER STRASBOURG CDI</h3>
+          <p class="text-[#FFFFFF]/60">
+            Pose de plaques, isolation, plâtre traditionnel, staff, gestion
+            d’équipe, travail en équipe, gestion de chantier
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-4 gap-4">
+        <div class="col-span-1 text-[#FFFFFF]/30 text-sm font-bold">
+          2021
+        </div>
+        <div class="col-span-3">
+          <h3 class="font-semibold text-sm">
+            CAP Plâtrier
+          </h3>
+          <p class="text-[#FFFFFF]/60">
+            CAP Plâtrier, Compagnons du Devoir NANTES
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-4 gap-4">
+        <div class="col-span-1 text-[#FFFFFF]/30 text-sm font-bold">
+          2019
+        </div>
+        <div class="col-span-3">
+          <h3 class="font-semibold text-sm">
+            BAC général option S
+          </h3>
+          <p class="text-[#FFFFFF]/60">
+            Lycée Kléber Strasbourg
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Side Projects -->
+    <div class="mt-10 space-y-8">
+      <h2 class=" text-5xl mb-4 instrument-serif-regular text-[#FFFFFF]">Projets</h2>
+
+      <div class="grid grid-cols-4 gap-4">
+        <div class="col-span-1 text-[#FFFFFF]/30 text-sm font-bold">BTS</div>
+        <div class="col-span-3">
+          <img src="./img/blanc.png" alt="chess" class="w-9 h-9 rounded-md" />
+          <a href="./projets/cdcpokeligame.pdf" class="font-semibold text-sm underline">Application mobile -
+            Pokeligame
+          </a>
+          <p class="text-[#FFFFFF]/60">
+            Pokeligame est une application mobile de gestion de collection de
+            cartes de booster et de display Pokémon.
+          </p>
+          <p class="text-[#FFFFFF]/30 text-sm font-bold mt-1">
+            React Native • Flask/Python • mysql
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-4 gap-4">
+        <div class="col-span-1 text-[#FFFFFF]/30 text-sm font-bold">BTS</div>
+        <div class="col-span-3">
+          <img src="./img/vert.png" alt="chess" class="w-9 h-9 rounded-md" />
+          <a href="./projets/NewVotecdc.pdf" class="font-semibold text-sm underline">Application Web - NewVote
+          </a>
+          <p class="text-[#FFFFFF]/60">
+            NewVote est un réseau social permettant aux utilisateurs de
+            partager des posts, commenter et interagir avec la communauté.
+          </p>
+          <p class="text-[#FFFFFF]/30 text-sm font-bold mt-1">
+            NextJS • mysql • TailwindCSS • daisyUI
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-4 gap-4">
+        <div class="col-span-1 text-[#FFFFFF]/30 text-sm font-bold">
+          Entreprise
+        </div>
+        <div class="col-span-3">
+          <img src="./img/blanc.png" alt="chess" class="w-9 h-9 rounded-md" />
+          <a href="./projets/devise.pdf" class="font-semibold text-sm underline">Application terminal
+          </a>
+          <p class="text-[#FFFFFF]/60">
+            Pour mission en entreprise de retourner le taux de change en temps
+            réel. Playwright : Bibliothèque d'automatisation de navigateur web
+          </p>
+          <p class="text-[#FFFFFF]/30 text-sm font-bold mt-1">
+            NodeJS • Playwright • fs • path
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-4 gap-4">
+        <div class="col-span-1 text-[#FFFFFF]/30 text-sm font-bold">
+          Entreprise
+        </div>
+        <div class="col-span-3">
+          <img src="./img/vert.png" alt="chess" class="w-9 h-9 rounded-md" />
+          <a href="./projets/projet_pointage.pdf" class="font-semibold text-sm underline">Application métier
+            (ERP)
+          </a>
+          <p class="text-[#FFFFFF]/60">
+            Intégrer la saisie des pointages dans l'ERP. Développement de
+            zéro.
+          </p>
+          <p class="text-[#FFFFFF]/30 text-sm font-bold mt-1">
+            ERP • DIAPASON • SQLServer
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer avec pixel art -->
+  <footer class="mt-20 border-t border-white/20 py-8">
+    <div class="max-w-2xl mx-auto px-6">
+      <!-- Informations de contact -->
+      <div class="text-center space-y-2">
+        <a href="https://github.com/suleyyerli"
+          class="block mt-2 text-[10px] text-center text-[#FFFFFF] hover:text-[#679438]" target="_blank"
+          rel="noopener noreferrer">
+          Mon GitHub
+        </a>
+        <p class="text-white/60 text-sm">
+          🏆 Achievement Unlocked: Portfolio terminé!
+        </p>
+      </div>
+    </div>
+
+    <!-- Copyright avec style pixel -->
+    <div class="text-center mt-6 pt-4">
+      <p class="text-white/40 text-sm instrument-serif-regular">
+        © 2025 YERLI Süleyman | Made with ❤️ and lots of ☕
+      </p>
+      <p class="text-white/30 text-xs mt-1">
+        Press [SPACE] to continue... (ou pas,😄)
+      </p>
+    </div>
+    </div>
+  </footer>
+</body>
+
 </html>
